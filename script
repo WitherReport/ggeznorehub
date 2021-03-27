@@ -1,0 +1,723 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local caca = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local X = Instance.new("TextButton")
+local minimize = Instance.new("TextButton")
+local Choose = Instance.new("Frame")
+local ImageButton = Instance.new("ImageButton")
+local General = Instance.new("TextButton")
+local ESP = Instance.new("TextButton")
+local DetectGame = Instance.new("TextButton")
+local Intro = Instance.new("ScrollingFrame")
+local TextLabel = Instance.new("TextLabel")
+local General1 = Instance.new("ScrollingFrame")
+local WALKSPEED = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local WalkSpeed = Instance.new("TextBox")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local JumpPower = Instance.new("TextBox")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local JUMPPOWER = Instance.new("TextLabel")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local Fly = Instance.new("TextButton")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local FlySpeed = Instance.new("TextBox")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local FLYSPEED = Instance.new("TextLabel")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local NoClip = Instance.new("TextButton")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local ESP_2 = Instance.new("ScrollingFrame")
+local ESP_3 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+local Enabled = Instance.new("TextButton")
+local YBA = Instance.new("ScrollingFrame")
+local cac = Instance.new("TextLabel")
+local Game = Instance.new("ScrollingFrame")
+local MainText = Instance.new("TextLabel")
+
+--Properties:
+
+caca.Name = "caca"
+caca.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+caca.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = caca
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.314714581, 0, 0.3482005, 0)
+Frame.Size = UDim2.new(0.315104157, 0, 0.301851839, 0)
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0.861157, 0, 0.128834352, 0)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "GG EZ NO RE GUI by Wither Report"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+X.Name = "X"
+X.Parent = Frame
+X.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+X.BorderSizePixel = 0
+X.Position = UDim2.new(0.930578411, 0, 0, 0)
+X.Size = UDim2.new(0.0694214851, 0, 0.128834352, 0)
+X.Font = Enum.Font.SourceSans
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(255, 0, 0)
+X.TextScaled = true
+X.TextSize = 14.000
+X.TextWrapped = true
+
+minimize.Name = "minimize"
+minimize.Parent = Frame
+minimize.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+minimize.BorderSizePixel = 0
+minimize.Position = UDim2.new(0.86115694, 0, 0, 0)
+minimize.Size = UDim2.new(0.0694214851, 0, 0.128834352, 0)
+minimize.Font = Enum.Font.SourceSans
+minimize.Text = "-"
+minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+minimize.TextScaled = true
+minimize.TextSize = 14.000
+minimize.TextWrapped = true
+
+Choose.Name = "Choose"
+Choose.Parent = Frame
+Choose.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Choose.BorderSizePixel = 0
+Choose.Position = UDim2.new(-0.203305781, 0, 0.128834352, 0)
+Choose.Size = UDim2.new(0.264778316, 0, 0.871165633, 0)
+Choose.ZIndex = 2
+
+ImageButton.Parent = Choose
+ImageButton.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.75, 0, 0, 0)
+ImageButton.Size = UDim2.new(0.252000004, 0, 0.142000005, 0)
+ImageButton.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+ImageButton.ImageColor3 = Color3.fromRGB(90, 90, 90)
+
+General.Name = "General"
+General.Parent = Choose
+General.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+General.BorderSizePixel = 0
+General.Position = UDim2.new(0.125786245, 0, 0.218309864, 0)
+General.Size = UDim2.new(0.617930472, 0, 0.105633803, 0)
+General.Font = Enum.Font.SourceSans
+General.Text = "General"
+General.TextColor3 = Color3.fromRGB(255, 255, 255)
+General.TextScaled = true
+General.TextSize = 14.000
+General.TextWrapped = true
+
+ESP.Name = "ESP"
+ESP.Parent = Choose
+ESP.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+ESP.BorderSizePixel = 0
+ESP.Position = UDim2.new(0.126000002, 0, 0.349999994, 0)
+ESP.Size = UDim2.new(0.617930472, 0, 0.105633803, 0)
+ESP.Font = Enum.Font.SourceSans
+ESP.Text = "ESP"
+ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESP.TextScaled = true
+ESP.TextSize = 14.000
+ESP.TextWrapped = true
+
+DetectGame.Name = "DetectGame"
+DetectGame.Parent = Choose
+DetectGame.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+DetectGame.BorderSizePixel = 0
+DetectGame.Position = UDim2.new(0.126000002, 0, 0.818000019, 0)
+DetectGame.Size = UDim2.new(0.617930472, 0, 0.105633803, 0)
+DetectGame.Font = Enum.Font.SourceSans
+DetectGame.Text = "Detect Game"
+DetectGame.TextColor3 = Color3.fromRGB(255, 255, 255)
+DetectGame.TextScaled = true
+DetectGame.TextSize = 14.000
+DetectGame.TextWrapped = true
+
+Intro.Name = "Intro"
+Intro.Parent = Frame
+Intro.Active = true
+Intro.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+Intro.BorderSizePixel = 0
+Intro.Position = UDim2.new(0.0620021336, 0, 0.128834262, 0)
+Intro.Size = UDim2.new(0.937997878, 0, 0.871165633, 0)
+
+TextLabel.Parent = Intro
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0627568439, 0, 0, 0)
+TextLabel.Size = UDim2.new(0.888123393, 0, 0.432652861, 0)
+TextLabel.Font = Enum.Font.Oswald
+TextLabel.Text = "Thanks for using my GUI ! (This GUI is in beta, there is maybe some bugs)."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+General1.Name = "General1"
+General1.Parent = Frame
+General1.Active = true
+General1.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+General1.BorderSizePixel = 0
+General1.Position = UDim2.new(0.061472591, 0, 0.128834352, 0)
+General1.Size = UDim2.new(0.938527524, 0, 0.871165633, 0)
+General1.Visible = false
+
+WALKSPEED.Name = "WALKSPEED"
+WALKSPEED.Parent = General1
+WALKSPEED.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WALKSPEED.BackgroundTransparency = 1.000
+WALKSPEED.BorderSizePixel = 0
+WALKSPEED.Position = UDim2.new(0.0387454666, 0, 0.033742331, 0)
+WALKSPEED.Size = UDim2.new(0.193727061, 0, 0.140845075, 0)
+WALKSPEED.Font = Enum.Font.SourceSans
+WALKSPEED.Text = "Walk Speed :"
+WALKSPEED.TextColor3 = Color3.fromRGB(255, 255, 255)
+WALKSPEED.TextScaled = true
+WALKSPEED.TextSize = 14.000
+WALKSPEED.TextWrapped = true
+
+UIAspectRatioConstraint.Parent = WALKSPEED
+UIAspectRatioConstraint.AspectRatio = 2.750
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = General1
+WalkSpeed.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+WalkSpeed.BorderSizePixel = 0
+WalkSpeed.Position = UDim2.new(0.251845241, 0, 0.025503844, 0)
+WalkSpeed.Size = UDim2.new(0.11623624, 0, 0.176056325, 0)
+WalkSpeed.Font = Enum.Font.SourceSans
+WalkSpeed.Text = "16"
+WalkSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeed.TextScaled = true
+WalkSpeed.TextSize = 14.000
+WalkSpeed.TextWrapped = true
+
+UIAspectRatioConstraint_2.Parent = WalkSpeed
+UIAspectRatioConstraint_2.AspectRatio = 1.320
+
+JumpPower.Name = "JumpPower"
+JumpPower.Parent = General1
+JumpPower.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+JumpPower.BorderSizePixel = 0
+JumpPower.Position = UDim2.new(0.774908304, 0, 0.025503844, 0)
+JumpPower.Size = UDim2.new(0.11623624, 0, 0.176056325, 0)
+JumpPower.Font = Enum.Font.SourceSans
+JumpPower.Text = "50"
+JumpPower.TextColor3 = Color3.fromRGB(255, 255, 255)
+JumpPower.TextScaled = true
+JumpPower.TextSize = 14.000
+JumpPower.TextWrapped = true
+
+UIAspectRatioConstraint_3.Parent = JumpPower
+UIAspectRatioConstraint_3.AspectRatio = 1.320
+
+JUMPPOWER.Name = "JUMPPOWER"
+JUMPPOWER.Parent = General1
+JUMPPOWER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+JUMPPOWER.BackgroundTransparency = 1.000
+JUMPPOWER.BorderSizePixel = 0
+JUMPPOWER.Position = UDim2.new(0.561808527, 0, 0.033742331, 0)
+JUMPPOWER.Size = UDim2.new(0.193727061, 0, 0.140845075, 0)
+JUMPPOWER.Font = Enum.Font.SourceSans
+JUMPPOWER.Text = "Jump Power :"
+JUMPPOWER.TextColor3 = Color3.fromRGB(255, 255, 255)
+JUMPPOWER.TextScaled = true
+JUMPPOWER.TextSize = 14.000
+JUMPPOWER.TextWrapped = true
+
+UIAspectRatioConstraint_4.Parent = JUMPPOWER
+UIAspectRatioConstraint_4.AspectRatio = 2.750
+
+Fly.Name = "Fly"
+Fly.Parent = General1
+Fly.BackgroundColor3 = Color3.fromRGB(255, 76, 76)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.0387454666, 0, 0.140730307, 0)
+Fly.Size = UDim2.new(0.327574849, 0, 0.17605634, 0)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fly.TextScaled = true
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
+
+UIAspectRatioConstraint_5.Parent = Fly
+UIAspectRatioConstraint_5.AspectRatio = 3.720
+
+FlySpeed.Name = "FlySpeed"
+FlySpeed.Parent = General1
+FlySpeed.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+FlySpeed.BorderSizePixel = 0
+FlySpeed.Position = UDim2.new(0.250084072, 0, 0.232559055, 0)
+FlySpeed.Size = UDim2.new(0.11623624, 0, 0.176056325, 0)
+FlySpeed.Font = Enum.Font.SourceSans
+FlySpeed.Text = "50"
+FlySpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+FlySpeed.TextScaled = true
+FlySpeed.TextSize = 14.000
+FlySpeed.TextWrapped = true
+
+UIAspectRatioConstraint_6.Parent = FlySpeed
+UIAspectRatioConstraint_6.AspectRatio = 1.320
+
+FLYSPEED.Name = "FLYSPEED"
+FLYSPEED.Parent = General1
+FLYSPEED.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FLYSPEED.BackgroundTransparency = 1.000
+FLYSPEED.BorderSizePixel = 0
+FLYSPEED.Position = UDim2.new(0.0387454666, 0, 0.240797549, 0)
+FLYSPEED.Size = UDim2.new(0.193727061, 0, 0.140845075, 0)
+FLYSPEED.Font = Enum.Font.SourceSans
+FLYSPEED.Text = "Fly Speed :"
+FLYSPEED.TextColor3 = Color3.fromRGB(255, 255, 255)
+FLYSPEED.TextScaled = true
+FLYSPEED.TextSize = 14.000
+FLYSPEED.TextWrapped = true
+
+UIAspectRatioConstraint_7.Parent = FLYSPEED
+UIAspectRatioConstraint_7.AspectRatio = 2.750
+
+NoClip.Name = "NoClip"
+NoClip.Parent = General1
+NoClip.BackgroundColor3 = Color3.fromRGB(255, 76, 76)
+NoClip.BorderSizePixel = 0
+NoClip.Position = UDim2.new(0.563569725, 0, 0.140730307, 0)
+NoClip.Size = UDim2.new(0.327574849, 0, 0.17605634, 0)
+NoClip.Font = Enum.Font.SourceSans
+NoClip.Text = "NoClip"
+NoClip.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoClip.TextScaled = true
+NoClip.TextSize = 14.000
+NoClip.TextWrapped = true
+
+UIAspectRatioConstraint_8.Parent = NoClip
+UIAspectRatioConstraint_8.AspectRatio = 3.720
+
+ESP_2.Name = "ESP"
+ESP_2.Parent = Frame
+ESP_2.Active = true
+ESP_2.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+ESP_2.BorderSizePixel = 0
+ESP_2.Position = UDim2.new(0.061472591, 0, 0.128834352, 0)
+ESP_2.Size = UDim2.new(0.94513917, 0, 0.871165633, 0)
+ESP_2.Visible = false
+
+ESP_3.Name = "ESP"
+ESP_3.Parent = ESP_2
+ESP_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ESP_3.BackgroundTransparency = 1.000
+ESP_3.BorderSizePixel = 0
+ESP_3.Position = UDim2.new(0.0387454666, 0, 0.033742331, 0)
+ESP_3.Size = UDim2.new(0.193727061, 0, 0.140845075, 0)
+ESP_3.Font = Enum.Font.SourceSans
+ESP_3.Text = "ESP :"
+ESP_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESP_3.TextScaled = true
+ESP_3.TextSize = 14.000
+ESP_3.TextWrapped = true
+
+UIAspectRatioConstraint_9.Parent = ESP_3
+UIAspectRatioConstraint_9.AspectRatio = 2.750
+
+Enabled.Name = "Enabled?"
+Enabled.Parent = ESP_2
+Enabled.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Enabled.BorderSizePixel = 0
+Enabled.Position = UDim2.new(0.218383297, 0, 0.0222051349, 0)
+Enabled.Size = UDim2.new(0.0949999988, 0, 0.0820000023, 0)
+Enabled.Font = Enum.Font.SourceSans
+Enabled.Text = ""
+Enabled.TextColor3 = Color3.fromRGB(255, 255, 255)
+Enabled.TextScaled = true
+Enabled.TextSize = 14.000
+Enabled.TextWrapped = true
+
+YBA.Name = "YBA"
+YBA.Parent = Frame
+YBA.Active = true
+YBA.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+YBA.BorderSizePixel = 0
+YBA.Position = UDim2.new(0.0544772483, 0, 0.128834352, 0)
+YBA.Size = UDim2.new(0.94513917, 0, 0.871165633, 0)
+YBA.Visible = false
+
+cac.Name = "cac"
+cac.Parent = YBA
+cac.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cac.BackgroundTransparency = 1.000
+cac.BorderSizePixel = 0
+cac.Position = UDim2.new(0.00796159077, 0, -0.00422751438, 0)
+cac.Size = UDim2.new(0, 389, 0, 47)
+cac.Font = Enum.Font.GothamBlack
+cac.Text = "---------YBA---------"
+cac.TextColor3 = Color3.fromRGB(255, 255, 255)
+cac.TextScaled = true
+cac.TextSize = 14.000
+cac.TextWrapped = true
+
+Game.Name = "Game"
+Game.Parent = Frame
+Game.Active = true
+Game.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+Game.BorderSizePixel = 0
+Game.Position = UDim2.new(0.0620021336, 0, 0.128834262, 0)
+Game.Size = UDim2.new(0.937997878, 0, 0.871165633, 0)
+Game.Visible = false
+
+MainText.Name = "Main Text"
+MainText.Parent = Game
+MainText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainText.BackgroundTransparency = 1.000
+MainText.Position = UDim2.new(0.0627568439, 0, 0, 0)
+MainText.Size = UDim2.new(0.888123393, 0, 0.432652861, 0)
+MainText.Font = Enum.Font.Oswald
+MainText.Text = "Detecting Game..."
+MainText.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainText.TextScaled = true
+MainText.TextSize = 14.000
+MainText.TextTransparency = 1.000
+MainText.TextWrapped = true
+
+-- Scripts:
+
+local function NKPL_fake_script() -- Frame.MOVESCRIPT 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = gui:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y), 'Out', 'Linear', 0, true); -- drag speed
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(NKPL_fake_script)()
+local function EQYDV_fake_script() -- caca.LocalScript 
+	local script = Instance.new('LocalScript', caca)
+
+	local MainFrame = script.Parent.Frame
+	local ChooseFrame = MainFrame.Choose
+	local GeneralFrame = MainFrame.General1
+	local ESPFrame = MainFrame.ESP
+	local IntroFrame = MainFrame.Intro
+	local DetectFrame = MainFrame.Game
+	local YBAFrame = MainFrame.YBA
+	local CloseButton = MainFrame.X
+	local MinimizeButton = MainFrame.minimize
+	local ChooseButton = ChooseFrame.ImageButton
+	local ChooseVariable = false
+	local MinimizedVariable = false
+	local CurrentFrame = "Intro"
+	local GeneralButton = ChooseFrame.General
+	local Player = game.Players.LocalPlayer
+	local TS = game:GetService("TweenService")
+	local torso
+	local Character = Player.Character or Player.CharacterAdded:Wait()
+	repeat wait() print(Character) until Character
+	if Character:FindFirstChildOfClass'Humanoid'.RigType == Enum.HumanoidRigType.R6 then
+		torso = Player.Character:WaitForChild("Torso")
+	else
+		torso = Player.Character:WaitForChild("UpperTorso")
+	end
+	local ESPEnabled = false
+	local Mouse = Player:GetMouse()
+	local flying = true
+	local deb = true
+	local ctrl = {f = 0, b = 0, l = 0, r = 0}
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+	local maxspeed = 50
+	local speed = 0
+	
+	function GetGameName()
+		local gameid = game.GameId
+		if gameid == 2809202155 then
+			return "Your Bizarre Adventure"
+		else
+			return "There's no script for this game :("
+		end
+	end
+	
+	function Type(Text, Objet, Speed)
+		for i = 1, string.len(Text) do
+			print(string.len(Text))
+			print(Text.sub(1, i))
+			Objet.Text = string.sub(Text, 1, i)
+			wait(Speed)
+		end
+	end
+	
+	function createESP(hrp)
+		local BillboardGui = Instance.new("BillboardGui")
+		BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		BillboardGui.AlwaysOnTop = true
+		BillboardGui.Size = UDim2.new(4, 0, 6, 0)
+		BillboardGui.Active = true
+		BillboardGui.Name = "ZOULETTE"
+	
+		local ImageLabel = Instance.new("ImageLabel")
+		ImageLabel.Size = UDim2.new(1, 0, 1, 0)
+		ImageLabel.BackgroundTransparency = 1
+		ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		ImageLabel.Image = "http://www.roblox.com/asset/?id=6546509003"
+		ImageLabel.Parent = BillboardGui
+	
+		BillboardGui.Parent = hrp
+	end
+	
+	function delESP(hrp)
+		hrp:FindFirstChild("ZOULETTE"):Destroy()
+	end
+	
+	function Fly()
+		local bg = Instance.new("BodyGyro", torso)
+		bg.P = 9e4
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		bg.cframe = torso.CFrame
+		local bv = Instance.new("BodyVelocity", torso)
+		bv.velocity = Vector3.new(0,0.1,0)
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+		repeat wait()
+			Character.Humanoid.PlatformStand = true
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+				speed = maxspeed --speed+.5+(speed/maxspeed)
+				if speed > maxspeed then
+					speed = maxspeed
+				end
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+				speed = 0
+				if speed < 0 then
+					speed = 0
+				end
+			end
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+			else
+				bv.velocity = Vector3.new(0,0.1,0)
+			end
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame-- * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+		until not flying
+		ctrl = {f = 0, b = 0, l = 0, r = 0}
+		lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		speed = 0
+		bg:Destroy()
+		bv:Destroy()
+		Player.Character.Humanoid.PlatformStand = false
+	end
+	Mouse.KeyDown:connect(function(key)
+		if key:lower() == "w" then
+			ctrl.f = 1
+		elseif key:lower() == "s" then
+			ctrl.b = -1
+		elseif key:lower() == "a" then
+			ctrl.l = -1
+		elseif key:lower() == "d" then
+			ctrl.r = 1
+		end
+	end)
+	Mouse.KeyUp:connect(function(key)
+		if key:lower() == "w" then
+			ctrl.f = 0
+		elseif key:lower() == "s" then
+			ctrl.b = 0
+		elseif key:lower() == "a" then
+			ctrl.l = 0
+		elseif key:lower() == "d" then
+			ctrl.r = 0
+		end
+	end)
+	
+	noclip = false
+	game:GetService('RunService').Stepped:connect(function()
+		if noclip then
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+	
+	game.Players.PlayerAdded:Connect(function(plr)
+		if ESPEnabled == true then
+			repeat wait() until plr.Character:FindFirstChild("HumanoidRootPart")
+			if ESPEnabled == true then
+				createESP(plr.Character:FindFirstChild("HumanoidRootPart"))
+			end	
+		end
+	end)
+	
+	CloseButton.MouseButton1Down:Connect(function()
+		MainFrame:TweenSize(UDim2.new(0,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .8)
+		wait(.8)
+		script.Parent:Destroy()
+	end)
+	
+	ChooseButton.MouseButton1Down:Connect(function()
+		if ChooseVariable == false then
+			ChooseFrame:TweenPosition(UDim2.new(0,0,0.129,0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .4)
+			ChooseVariable = true
+		else
+			ChooseFrame:TweenPosition(UDim2.new(-0.198,0,0.129,0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .4)
+			ChooseVariable = false
+		end
+	end)
+	
+	MinimizeButton.MouseButton1Down:Connect(function()
+		if MinimizedVariable == false then
+			MinimizedVariable = true
+			MainFrame[CurrentFrame]:TweenSize(UDim2.new(1,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .5)
+			ChooseFrame:TweenSize(UDim2.new(0.265,0,0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .5)
+		else
+			MinimizedVariable = false
+			MainFrame[CurrentFrame]:TweenSize(UDim2.new(1,0,0.871,0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .5)
+			ChooseFrame:TweenSize(UDim2.new(0.265,0,0.871,0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .5)
+		end
+	end)
+	
+	GeneralButton.MouseButton1Down:Connect(function()
+		IntroFrame.Visible = false
+		GeneralFrame.Visible = true
+		ESPFrame.Visible = false
+		DetectFrame.Visible = false
+		CurrentFrame = "General1"
+	end)
+	
+	ChooseFrame.ESP.MouseButton1Down:Connect(function()
+		IntroFrame.Visible = false
+		GeneralFrame.Visible = false
+		ESPFrame.Visible = true
+		DetectFrame.Visible = false
+		CurrentFrame = "ESP"
+	end)
+	
+	GeneralFrame.JumpPower.Changed:Connect(function(prop)
+		if prop == "Text" then
+			Character:FindFirstChildOfClass("Humanoid").JumpPower = tonumber(GeneralFrame.JumpPower.Text)
+		end
+	end)
+	
+	GeneralFrame.WalkSpeed.Changed:Connect(function(prop)
+		if prop == "Text" then
+			Character:FindFirstChildOfClass("Humanoid").WalkSpeed = tonumber(GeneralFrame.WalkSpeed.Text)
+		end
+	end)
+	
+	ESPFrame["Enabled?"].MouseButton1Down:Connect(function()
+		if ESPEnabled == false then
+			ESPEnabled = true
+			ESPFrame["Enabled?"].BackgroundColor3 = Color3.fromRGB(0, 255, 127)
+			for i, v in pairs(game.Players:GetPlayers()) do
+				createESP(v.Character.HumanoidRootPart)
+			end
+		else
+			ESPEnabled = false
+			ESPFrame["Enabled?"].BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			for i, v in pairs(game.Players:GetPlayers()) do
+				delESP(v.Character.HumanoidRootPart)
+			end
+		end
+	end)
+	
+	GeneralFrame.Fly.MouseButton1Down:Connect(function()
+		if flying then 
+			flying = false
+			GeneralFrame.Fly.BackgroundColor3 = Color3.fromRGB(255, 76, 76)
+		else
+			flying = true
+			GeneralFrame.Fly.BackgroundColor3 = Color3.fromRGB(0, 255, 127)
+			Fly()
+		end	
+	end)
+	
+	GeneralFrame.FlySpeed.Changed:Connect(function(prop)
+		if prop == "Text" then
+			maxspeed = tonumber(GeneralFrame.FlySpeed.Text)
+			print(maxspeed)
+		end
+	end)
+	
+	GeneralFrame.NoClip.MouseButton1Down:Connect(function()
+		if noclip then 
+			noclip = false
+			GeneralFrame.NoClip.BackgroundColor3 = Color3.fromRGB(255, 76, 76)
+		else
+			noclip = true
+			GeneralFrame.NoClip.BackgroundColor3 = Color3.fromRGB(0, 255, 127)
+		end	
+	end)
+	
+	ChooseFrame.DetectGame.MouseButton1Down:Connect(function()
+		IntroFrame.Visible = false
+		GeneralFrame.Visible = false
+		ESPFrame.Visible = false
+		DetectFrame.Visible = true
+		CurrentFrame = "Game"
+		wait(.5)
+		TS:Create(DetectFrame["Main Text"], TweenInfo.new(1.5), {TextTransparency = 0}):Play()
+		wait(2)
+		local gam = GetGameName()
+		TS:Create(DetectFrame["Main Text"], TweenInfo.new(1.5), {TextTransparency = 1}):Play()
+		wait(1.5)
+		TS:Create(DetectFrame["Main Text"], TweenInfo.new(.5), {TextTransparency = 0}):Play()
+		DetectFrame["Main Text"].Text = ""
+		wait(.5)
+		Type(gam, DetectFrame["Main Text"], .01)
+		TS:Create(DetectFrame["Main Text"], TweenInfo.new(.5), {TextTransparency = 1}):Play()
+		wait(.5)
+		if gam == "Your Bizarre Adventure" then
+			IntroFrame.Visible = false
+			GeneralFrame.Visible = false
+			ESPFrame.Visible = false
+			DetectFrame.Visible = false
+			YBAFrame.Visible = true
+			CurrentFrame = "YBA"
+		end
+	end)
+end
+coroutine.wrap(EQYDV_fake_script)()
