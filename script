@@ -477,7 +477,7 @@ local function EQYDV_fake_script() -- caca.LocalScript
 	
 	function GetGameName()
 		local gameid = game.GameId
-		if gameid == 2809202155 then
+		if gameid == 1016936714 then
 			return "Your Bizarre Adventure"
 		else
 			return "There's no script for this game :("
