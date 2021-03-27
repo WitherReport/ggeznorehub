@@ -707,7 +707,7 @@ local function EQYDV_fake_script() -- caca.LocalScript
 		TS:Create(DetectFrame["Main Text"], TweenInfo.new(.5), {TextTransparency = 0}):Play()
 		DetectFrame["Main Text"].Text = ""
 		wait(.5)
-		Type(gam, DetectFrame["Main Text"], .01)
+		Type(gam, DetectFrame["Main Text"], .02)
 		TS:Create(DetectFrame["Main Text"], TweenInfo.new(.5), {TextTransparency = 1}):Play()
 		wait(.5)
 		if gam == "Your Bizarre Adventure" then
